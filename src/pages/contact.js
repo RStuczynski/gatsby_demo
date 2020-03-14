@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 
 export default class ContactPage extends React.Component {
   state = {
@@ -15,9 +16,11 @@ export default class ContactPage extends React.Component {
   }
   render() {
     return (
+    <div>
+    <Link to="/">Home</Link>
 	<form name="contact" method="POST" data-netlify="true">
 	  <p>
-	    <label>Your Name: <input type="text" name="name" /></label>   
+	    <label>Shittiots Name: <input type="text" name="name" /></label>   
 	  </p>
 	  <p>
 	    <label>Your Email: <input type="email" name="email" /></label>
@@ -35,6 +38,7 @@ export default class ContactPage extends React.Component {
 	    <button type="submit">Send</button>
 	  </p>
 	</form>
+	</div>
     )
   }
 }
